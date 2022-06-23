@@ -24,20 +24,29 @@ img {
 
 /* layout */
 .wrapper {
-  width: 900px;
+  width: 960px;
   margin: 0 auto;
 }
 
+/* commons */
+.text_bold {
+  font-weight: 900;
+}
+
 /* design */
-header {
+.header {
   background-image: url(./images/header-bg.png);
+  background-size: cover;
+  background-position: center;
   padding-top: 50px;
   color: #ffa600;
 }
 
 .header-contents {
-  border: 20px solid;
-  border-bottom: none;
+  /* border: 20px solid;
+  border-bottom: none; */
+  border-width: 20px 20px 0 20px;
+  border-style: solid;
   padding: 40px;
   background-image: url(./images/container-bg.png);
   background-position: right 40px top 40px;
@@ -45,21 +54,17 @@ header {
   background-size: contain;
 }
 
-.header-contents-title {
+.header-title {
   font-size: 30px;
   letter-spacing: 0.3em;
-  line-height: 0.8;
+  line-height: 1;
   display: inline-block;
   border-bottom: 3px solid;
   margin-bottom: 40px;
 }
 
-.text_bold {
-  font-weight: 900;
-}
-
-.header-contents-description {
-  width: 450px;
+.header-description {
+  max-width: 450px;
   line-height: 1.5;
 }
 
@@ -68,7 +73,6 @@ header {
   padding: 30px 0;
 }
 
-/* 컨텐츠 양이 달라졌을 때 레이아웃이 깨지는 문제가 있어 여러가지 시도를 해보았는데 flex 개념 미숙으로 속 시원하게 해결이 되지 않습니다. 컨텐츠 양의 변화가 있을 때 고려해야하는 사항에 대해 알고싶습니다. */
 .grid {
   display: flex;
   gap: 30px;
@@ -80,11 +84,9 @@ header {
   overflow: hidden;
   width: 250px;
   flex-grow: 1;
+  background-color: #fff;
 }
 
-/* width 100% 주었을 때의 너비가 280, 안주었을 때 너비가 300으로 나옵니다.
-    300은 원래 이미지 사이즈 너비가 300이라 300에 대한 값이 나오는건 이해가 가는 부분인데
-    width 100% 일 때 너비가 280 나오는 것이 어느 기준에서 그 값이 나온건지 모르겠습니다. */
 .grid-item-cover {
   width: 100%;
 }
@@ -95,7 +97,7 @@ header {
   background-repeat: no-repeat;
   background-position: right center;
   color: #ffa600;
-  padding: 15px;
+  padding: 15px 50px 15px 15px;
   font-weight: 700;
   border-top: 3px solid;
 }
